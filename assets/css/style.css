@@ -1,0 +1,9 @@
+/*----------------style sheet for homework1----------------*/
+.container {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 1000px;
+    color: rgb(131, 50, 50);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25em;
+  }
