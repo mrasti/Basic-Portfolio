@@ -1,9 +1,13 @@
 /*------------------------allPages_style-------------------------*/
+/* span.ex1 {
+  min-width: 700px;
+} */
 
 body{
   background: url("../images/img_background.png");
   margin: 0px;
   font-family: sans-serif;
+  min-width:600px;
 }
 
 header {
@@ -18,26 +22,22 @@ header {
 }
 
 .name_box{
-  width: 160px;
-  height: 35px;
-  margin-left: 165px;
-  padding-top: 15px;
+  padding-top: 10px;
   font-size: 1.2em;
-  color: white;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
 }
 
 nav{
-  float: right;
-  margin-right: 120px;
-  position: absolute;
+  margin: 0px 120px;
+  padding-top: 60px;
   bottom: 0;
   right: 0;
+  display: flex;
+  justify-content: space-between;
+  color: white;
 }
 
 nav ul{
+  float: right;
   margin:0;
   padding: 0;
   list-style: none;
@@ -53,10 +53,9 @@ nav ul li{
   border-left: solid 1px rgb(167, 167, 167);
 }
 
-nav ul li a{
+nav a{
   text-decoration: none;
   color: white;
-  /* color: rgb(102, 102, 102); */
 }
 
 footer {
@@ -97,6 +96,7 @@ footer {
 }
 
 #text{
+  width: 70%;
   float:right;
   top: 0px;
   text-align: justify;
@@ -115,6 +115,7 @@ footer {
 .labled_box{
   display: inline-grid;
   margin: 30px 30px;
+  transition-duration: 1.5s;
 }
 
 .labled_box:hover{
@@ -137,7 +138,8 @@ footer {
 .label{ 
   height: 31px;
   margin: 0px 0px 0px 0px;
-  background-color: #367e88b0;
+  background-color: rgba(20,20,20,0.7);
+  /* background-color: rgba(60,141,152,0.7); */
   color: white;
   font-size:18px;
   text-align:center;
@@ -146,6 +148,7 @@ footer {
   padding-top: 9px;
   margin-top: -45px;
   position: relative;
+  text-shadow: -2px 2px 3px rgb(19, 19, 19);
 }
 
 
