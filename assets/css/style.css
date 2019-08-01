@@ -107,7 +107,6 @@ footer {
 /*------------------------portfolio_style-------------------------*/
 
 .c_box_white{
-  height: 870px;
   margin: 5% 2%;
   padding: 0px 4%;
 }
@@ -138,8 +137,8 @@ footer {
 .label{ 
   height: 31px;
   margin: 0px 0px 0px 0px;
-  background-color: rgba(20,20,20,0.7);
-  /* background-color: rgba(60,141,152,0.7); */
+  /* background-color: rgba(20,20,20,0.7); */
+  background-color: rgba(60,141,152,0.6);
   color: white;
   font-size:18px;
   text-align:center;
@@ -149,6 +148,10 @@ footer {
   margin-top: -45px;
   position: relative;
   text-shadow: -2px 2px 3px rgb(19, 19, 19);
+}
+
+.lable:hover{
+  visibility: hidden;
 }
 
 
