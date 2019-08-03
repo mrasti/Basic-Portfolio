@@ -5,33 +5,89 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Srisakdi" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  
   <body>
     <header>
-        <nav>
-          <div class="name_box"><a href="#">Melika Rasti</a></div>
-          <div>
-            <ul> 
-                <li><a href="#">About</a></li>
-                <li class="nav_border"><a href="portfolio.html">Projects</a></li>
-                <li class="nav_border"><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
+      <nav>
+        <div class="name_box"><a href="#">Melika Rasti</a></div>
+        <div>
+          <ul> 
+            <li><a href="#">About</a></li>
+            <li class="nav_border"><a href="portfolio.html">Projects</a></li>
+            <li class="nav_border"><a id="contacts" href="#modal">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <div class="c_box_white" id="smaller"> 
-        <div id="my_photo1">
-            <img id="my_photo" src="assets/images/myphoto.jpg" alt="myphoto"></img>
-        </div>
-        <div id="text">
-            <p>Fascinated by the creativity involved in the process of designing a website, I am passionate about developing visually appealing yet practical designs. During the last year, I have tried my best to improve my skills in the field of software engineering and web development.
-            Software Engineer, excited by learning, interested in creating visually appealing and innovative applications, who is very detail oriented and organized. 
-            </p>
-        </div>
+      <div class="about_box" id="my_photo1">
+        <img id="my_photo" src="assets/images/myphoto.jpg" alt="myphoto"></img>
+      </div>
+      <div class="about_box" id="text">
+        <p>Fascinated by the creativity involved in the process of designing a website, I am passionate about developing visually appealing yet practical designs. During the last year, I have tried my best to improve my skills in the field of software engineering and web development.
+        Software Engineer, excited by learning, interested in creating visually appealing and innovative applications, who is very detail oriented and organized. 
+        </p>
+      </div>
+      <div id="skills">
+        <h4>Skills</h4>
+        <div id="colms">
+          <div class="colm">
+            <ul>
+              <li>Python</li>
+              <li>Django</li>
+              <li>PostgreSQL</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>Mongoose</li>
+              <li>git</li>
+            </ul> 
+          </div>
+          <div class="colm">
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SASS</li>
+              <li>Bootstrap</li>
+              <li>Heroku</li>
+              <li>Tableau</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Lightroom</li>
+            </ul> 
+          </div>
+        </div> 
+      </div>
     </div>
+    <div id="modal" class="modal-layer">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <a href="https://www.linkedin.com/in/melika-rasti/" target="blank"><i class="fa fa-linkedin fa-5x" style="color:#DDDDDD;"></i></a>
+          <a href="https://github.com/mrasti" target="blank"><i class="fa fa-github fa-5x" style="color:#DDDDDD;"></i></a>
+          <a href="https://www.linkedin.com/in/melika-rasti/" target="blank"><i class="fa fa-envelope fa-5x" style="color:#DDDDDD;"></i></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById("modal");
+      var conts = document.getElementById("contacts");
+      var span = document.getElementsByClassName("close")[0];
+      conts.onclick = function() {
+                     modal.style.display = "block";
+                    }
+      span.onclick = function() {
+                    modal.style.display = "none";
+                  }
+      window.onclick = function(event) {
+                      if (event.target == modal) {
+                        modal.style.display = "none";
+                      }
+                    }
+    </script>
     <footer>
-      <!-- Copyright © 2019  -->
     </footer>
   </body>
 </html>
