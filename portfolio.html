@@ -10,7 +10,7 @@
   <body>
     <header>
       <nav>
-        <div class="name_box"><a href="index.html">Melika Rasti</a></div>
+        <div class="name_box"><a href="index.html">Melika Rasti | <span>Software Engineer</span></a></div>
         <div>
           <ul> 
             <li><a href="index.html">About</a></li>
@@ -23,7 +23,7 @@
     <div class="container">
       <div class="c_box_white row"> 
         <div class="labled_box" id="labled_box1">
-          <a href="#" target="blank">
+          <a href="http://ec2-54-87-128-150.compute-1.amazonaws.com/" target="blank">
             <img class="photo" id="img3" src="assets/images/img3.png" alt="photo3"></img>
             <div class="label" id="img3_box">Photo Editing Application</div>
           </a>
@@ -66,7 +66,8 @@
         <div>
           <a href="https://www.linkedin.com/in/melika-rasti/" target="blank"><i class="fa fa-linkedin fa-5x" style="color:#DDDDDD;"></i></a>
           <a href="https://github.com/mrasti" target="blank"><i class="fa fa-github fa-5x" style="color:#DDDDDD;"></i></a>
-          <a href="https://www.linkedin.com/in/melika-rasti/" target="blank"><i class="fa fa-envelope fa-5x" style="color:#DDDDDD;"></i></a>
+          <a id="emicon" href="#"><i class="fa fa-envelope fa-5x" style="color:#DDDDDD;"></i></a>
+          <input type="text" value="melika.r@gmail.com" id="email">
         </div>
       </div>
     </div>
@@ -74,17 +75,26 @@
       var modal = document.getElementById("modal");
       var conts = document.getElementById("contacts");
       var span = document.getElementsByClassName("close")[0];
-      conts.onclick = function() {
+      var emicon = document.getElementById("emicon");
+
+      conts.onclick = function(){
                      modal.style.display = "block";
                     }
-      span.onclick = function() {
+      span.onclick = function(){
                     modal.style.display = "none";
                   }
-      window.onclick = function(event) {
+      window.onclick = function(event){
                       if (event.target == modal) {
                         modal.style.display = "none";
                       }
                     }
+      emicon.onclick= function(){
+        var copyText = document.getElementById("email");
+        copyText.select();
+        // console.log(a);
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+      }
     </script>
     <footer>
     </footer>
