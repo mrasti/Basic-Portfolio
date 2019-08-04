@@ -25,7 +25,7 @@
         <img id="my_photo" src="assets/images/myphoto.jpg" alt="myphoto"></img>
       </div>
       <div class="about_box" id="text">
-        <p>Fascinated by the creativity involved in the process of designing a website, I am passionate about developing visually appealing yet practical designs. </br> Please feel free to check out my projects and learn a little more about me.
+        <p>Fascinated by the creativity involved in the process of designing a website, I am passionate about developing visually appealing and practical designs. </br> Please feel free to check out my projects and learn a little more about me.
         </p>
       </div>
       <div id="skills">
@@ -68,7 +68,8 @@
         <div>
           <a href="https://www.linkedin.com/in/melika-rasti/" target="blank"><i class="fa fa-linkedin fa-5x" style="color:#DDDDDD;"></i></a>
           <a href="https://github.com/mrasti" target="blank"><i class="fa fa-github fa-5x" style="color:#DDDDDD;"></i></a>
-          <a href="https://www.linkedin.com/in/melika-rasti/" target="blank"><i class="fa fa-envelope fa-5x" style="color:#DDDDDD;"></i></a>
+          <a id="emicon" href="#"><i class="fa fa-envelope fa-5x" style="color:#DDDDDD;"></i></a>
+          <input type="text" value="melika.r@gmail.com" id="email">
         </div>
       </div>
     </div>
@@ -76,17 +77,24 @@
       var modal = document.getElementById("modal");
       var conts = document.getElementById("contacts");
       var span = document.getElementsByClassName("close")[0];
-      conts.onclick = function() {
+      var emicon = document.getElementById("emicon");
+
+      conts.onclick = function(){
                      modal.style.display = "block";
                     }
-      span.onclick = function() {
+      span.onclick = function(){
                     modal.style.display = "none";
                   }
-      window.onclick = function(event) {
+      window.onclick = function(event){
                       if (event.target == modal) {
                         modal.style.display = "none";
                       }
                     }
+      emicon.onclick= function(){
+        var copyText = document.getElementById("email");
+        copyText.select();
+        document.execCommand("copy");
+      }
     </script>
     <footer>
     </footer>
