@@ -76,22 +76,29 @@
       var conts = document.getElementById("contacts");
       var span = document.getElementsByClassName("close")[0];
       var emicon = document.getElementById("emicon");
+      var originalTag = '<i class="fa fa-envelope fa-5x" style="color:#DDDDDD;">';
 
       conts.onclick = function(){
                      modal.style.display = "block";
                     }
       span.onclick = function(){
                     modal.style.display = "none";
+                    resetModal();
                   }
       window.onclick = function(event){
                       if (event.target == modal) {
                         modal.style.display = "none";
+                        resetModal();
                       }
                     }
       emicon.onclick= function(){
         var copyText = document.getElementById("email");
         copyText.select();
         document.execCommand("copy");
+        emicon.innerHTML = "</br> melika.r@gmail </br> copied to clipboard";
+      }
+      function resetModal(){
+        emicon.innerHTML = originalTag;
       }
     </script>
     <footer>
